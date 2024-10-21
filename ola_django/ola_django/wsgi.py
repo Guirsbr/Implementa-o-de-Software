@@ -1,5 +1,5 @@
 """
-WSGI config for implementacao_de_software project.
+WSGI config for ola_django project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'implementacao_de_software.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ola_django.settings')
 
 application = get_wsgi_application()

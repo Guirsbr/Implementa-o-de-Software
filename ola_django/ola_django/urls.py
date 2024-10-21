@@ -1,5 +1,5 @@
 """
-URL configuration for implementacao_de_software project.
+URL configuration for ola_django project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,13 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from django.http import HttpResponse
 
 def ola_django(request):
     return HttpResponse('Ola Mundo, sou o Django!')
- 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ola_django/', ola_django)
+    path('ola_django/', ola_django),
+    path('primeiro_app/', include('primeiro_app.urls')),
 ]
+
